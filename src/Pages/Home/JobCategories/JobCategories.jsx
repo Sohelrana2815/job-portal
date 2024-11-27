@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SectionTitle from "../../../Components/SectionTitle/SectionTitle";
 import { useEffect } from "react";
+import CategoryCard from "./CategoryCard";
 
 const JobCategories = () => {
   const [categories, setCategories] = useState([]);
@@ -18,7 +19,11 @@ const JobCategories = () => {
         heading="Job Category List"
         subHeading="Explore thousands of job opportunities with all the information you need. Its your future"
       />
-      <div>{categories.length}</div>
+      <div className="grid lg:grid-cols-4 lg:max-w-screen-2xl mx-auto">
+        {categories.map((category) => (
+          <CategoryCard key={category.id} category={category}  />
+        ))}
+      </div>
     </>
   );
 };
