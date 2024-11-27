@@ -1,8 +1,10 @@
 import { BsCurrencyDollar } from "react-icons/bs";
 import { CiLocationOn } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 const FeaturedJobsCard = ({ featuredJob }) => {
   const {
+    id,
     logo,
     job_title,
     company_name,
@@ -33,7 +35,9 @@ const FeaturedJobsCard = ({ featuredJob }) => {
             </p>
           </div>
           <div>
-            <button className="btn">View Details</button>
+            <Link to={`/jobDetails/${id}`}>
+              <button className="btn">View Details</button>
+            </Link>
           </div>
         </div>
       </div>
