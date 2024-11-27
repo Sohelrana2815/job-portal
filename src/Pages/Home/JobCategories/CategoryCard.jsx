@@ -2,7 +2,7 @@ const CategoryCard = ({ category }) => {
   const { logo, category_name, availability } = category;
   return (
     <>
-      <div className="relative w-[311px] h-[243px] rounded-lg overflow-hidden mx-auto font-Manrope">
+      <div className="relative md:w-[311px] md:h-[243px] w-1/2 h-full py-5 md:py-0 rounded-lg overflow-hidden mx-auto font-Manrope">
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#7e90fe] to-[#9873ff] opacity-50"></div>
 

@@ -18,13 +18,17 @@ const FeaturedJobsCard = ({ featuredJob }) => {
   return (
     <>
       <div className="card bg-base-100  shadow-xl py-4 font-Manrope">
-        <div className="card-body">
-          <img src={logo} className="lg:w-24"></img>
+        <div className="card-body space-y-1">
+          <img src={logo} className="w-24"></img>
           <h2 className="card-title">{job_title}</h2>
           <p>{company_name}</p>
           <div className="space-x-2">
-            <button className="btn btn-sm">{remote_or_onsite}</button>
-            <button className="btn btn-sm">{job_type}</button>
+            <span className="border p-1 rounded-lg border-purple-400">
+              {remote_or_onsite}
+            </span>
+            <span className="border p-1 rounded-lg border-purple-400">
+              {job_type}
+            </span>
           </div>
           <div className="flex justify-start">
             <p className="flex items-center">
@@ -36,7 +40,9 @@ const FeaturedJobsCard = ({ featuredJob }) => {
           </div>
           <div>
             <Link to={`/jobDetails/${id}`}>
-              <button className="btn">View Details</button>
+              <button className="btn btn-sm md:btn-md bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white">
+                View Details
+              </button>
             </Link>
           </div>
         </div>

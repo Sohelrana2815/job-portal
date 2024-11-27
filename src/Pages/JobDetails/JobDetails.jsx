@@ -13,26 +13,26 @@ const JobDetails = () => {
 
   return (
     <>
-      <div className=" md:h-[400px] relative">
+      <div className=" md:h-[400px] relative md:mt-0 mt-32">
         {/*background with low opacity */}
         <div className="absolute inset-0 bg-[#7e90fe] opacity-5"></div>
 
         {/* Centered Text */}
 
-        <h1 className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  text-3xl font-bold">
+        <h1 className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2  md:text-3xl font-bold">
           Job Details: {idInt}
         </h1>
         <div className="absolute bottom-0">
-          <img src={bg1} alt="" />
+          <img src={bg1} alt="" className="w-40 md:w-full" />
         </div>
         <div className="absolute right-0">
-          <img src={bg2} alt="" />
+          <img src={bg2} alt="" className="w-40 md:w-full" />
         </div>
       </div>
 
       {/* show details */}
-      <div className="grid md:grid-cols-5 gap-6 px-8 py-4 max-w-screen-2xl mx-auto lg:mt-32 ">
-        <div className="md:col-span-3  border h-96 p-4 space-y-6">
+      <div className="grid md:grid-cols-5 gap-6 px-8  max-w-screen-2xl mx-auto md:mt-32 mt-44 ">
+        <div className="md:col-span-3 h-96 p-4 space-y-6">
           <h4 className="font-medium  text-gray-600">
             {" "}
             <span className="font-extrabold text-black">
@@ -61,7 +61,7 @@ const JobDetails = () => {
           </h4>
         </div>
 
-        <div className="border h-96  py-4  relative col-span-2">
+        <div className=" h-96  py-4 mt-80 md:mt-0  relative col-span-2">
           <div className="absolute inset-0 bg-[#7e90fe] opacity-5"></div>
           <div className="px-4">
             <h2 className="font-extrabold text-lg ">Job Details</h2>
@@ -73,7 +73,9 @@ const JobDetails = () => {
               </p>
             </div>
           </div>
-          <button className="btn absolute bottom-0 w-full">Apply now </button>
+          <button className="btn absolute bottom-0 w-full bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white">
+            Apply now{" "}
+          </button>
         </div>
       </div>
     </>

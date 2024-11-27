@@ -29,7 +29,9 @@ const FeaturedJobs = () => {
           onClick={() => setVisibleJobs(featuredJobs.length)}
           className="flex  justify-center py-4"
         >
-          <button className="btn btn-primary">Show more</button>
+          <button className="btn bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white">
+            Show more
+          </button>
         </div>
       </div>
     </>

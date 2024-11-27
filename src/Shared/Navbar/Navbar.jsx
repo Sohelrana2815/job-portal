@@ -17,7 +17,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="navbar bg-base-100 p-8">
+      <div className="navbar bg-base-100 md:px-10 md:py-8 py-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -44,14 +44,16 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <span className="text-xl font-bold font-Manrope">Career Hub</span>
+            <span className="md:text-xl font-bold font-Manrope">
+              Career Hub
+            </span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white">
+          <a className="btn bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white btn-sm md:btn-md">
             Start Applying
           </a>
         </div>
