@@ -1,12 +1,13 @@
+import Banner from "../Banner/Banner";
 
 const Home = () => {
-    return (
-        <>
-      <div className="text-green-600 text-2xl text-center font-medium">
-          Hello World!
+  return (
+    <>
+      <div>
+        <Banner />
       </div>
-        </>
-    );
+    </>
+  );
 };
 
 export default Home;
