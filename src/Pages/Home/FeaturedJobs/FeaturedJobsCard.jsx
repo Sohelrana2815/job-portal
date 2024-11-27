@@ -17,7 +17,7 @@ const FeaturedJobsCard = ({ featuredJob }) => {
   } = featuredJob;
   return (
     <>
-      <div className="card bg-base-100  shadow-xl py-4">
+      <div className="card bg-base-100  shadow-xl py-4 font-Manrope">
         <div className="card-body">
           <img src={logo} className="lg:w-24"></img>
           <h2 className="card-title">{job_title}</h2>
