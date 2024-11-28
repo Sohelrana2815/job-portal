@@ -2,12 +2,17 @@ import { useLoaderData, useParams } from "react-router-dom";
 import bg1 from "../../assets/images/bg1.png";
 import bg2 from "../../assets/images/bg2.png";
 import { BsCurrencyDollar } from "react-icons/bs";
+import toast, { Toaster } from "react-hot-toast";
 const JobDetails = () => {
   const jobs = useLoaderData();
 
   const { id } = useParams();
   const idInt = parseInt(id);
   const job = jobs.find((job) => job.id === idInt);
+
+  const handleJobApplyToast = () => {
+    toast.success("Job Applied Successfully");
+  };
 
   console.log(idInt, job);
 
@@ -73,9 +78,13 @@ const JobDetails = () => {
               </p>
             </div>
           </div>
-          <button className="btn absolute bottom-0 w-full bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white">
+          <button
+            onClick={handleJobApplyToast}
+            className="btn absolute bottom-0 w-full bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white"
+          >
             Apply now{" "}
           </button>
+          <Toaster />
         </div>
       </div>
     </>
