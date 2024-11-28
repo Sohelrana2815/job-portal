@@ -2,6 +2,7 @@ import { useLoaderData, useParams } from "react-router-dom";
 import bg1 from "../../assets/images/bg1.png";
 import bg2 from "../../assets/images/bg2.png";
 import { BsCurrencyDollar } from "react-icons/bs";
+import { saveJobApplication } from "../../Utility/SavedAppliedJobs/SavedAppliedJobs";
 import toast, { Toaster } from "react-hot-toast";
 const JobDetails = () => {
   const jobs = useLoaderData();
@@ -10,11 +11,14 @@ const JobDetails = () => {
   const idInt = parseInt(id);
   const job = jobs.find((job) => job.id === idInt);
 
-  const handleJobApplyToast = () => {
-    toast.success("Job Applied Successfully");
+  const handleJobApplicationToast = (idInt) => {
+    const isSaved = saveJobApplication(idInt);
+    if (isSaved) {
+      toast.success("Job Applied Successfully");
+    } else {
+      toast.error("You have already applied for this job");
+    }
   };
-
-  console.log(idInt, job);
 
   return (
     <>
@@ -79,7 +83,7 @@ const JobDetails = () => {
             </div>
           </div>
           <button
-            onClick={handleJobApplyToast}
+            onClick={() => handleJobApplicationToast(idInt)}
             className="btn absolute bottom-0 w-full bg-gradient-to-r from-[#7e98fe] to-[#9873ff] text-white"
           >
             Apply now{" "}
