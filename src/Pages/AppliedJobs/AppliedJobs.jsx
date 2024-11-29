@@ -33,7 +33,7 @@ const AppliedJobs = () => {
       </h2>
       <div className="max-w-screen-2xl space-y-4 p-6">
         {appliedJobs.map((job) => (
-          <AppliedJobsCard key={job.id} />
+          <AppliedJobsCard key={job.id} job={job} />
         ))}
       </div>
     </div>
