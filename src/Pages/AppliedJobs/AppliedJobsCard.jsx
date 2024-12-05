@@ -13,6 +13,8 @@ const AppliedJobsCard = ({ job }) => {
   } = job;
   return (
     <>
+      {/* Applied jobs card */}
+
       <div className="lg:w-[1320px] h-[300px] p-7 border flex items-center justify-between">
         {/* 1st: content */}
         <div className="flex  gap-6">
